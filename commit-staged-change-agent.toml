@@ -1,0 +1,17 @@
+name = "csc"
+description = "Commit staged files using the commit-staged-change skill."
+model = "gpt-5.4-mini"
+model_reasoning_effort = "medium"
+sandbox_mode = "workspace-write"
+developer_instructions = """
+Always use the `commit-staged-change` skill first.
+If that skill is unavailable, stop and say it clearly.
+Commit only currently staged files.
+Do not stage extra files.
+Do not amend commits unless explicitly requested.
+After commit, report hash and subject.
+"""
+
+[[skills.config]]
+path = "/home/renanfranca/.codex/skills/commit-staged-change/SKILL.md"
+enabled = true
